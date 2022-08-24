@@ -13,7 +13,7 @@ public class Main {
         float num7 = 7;
         float num30 = 30;
 
-        //Realizo diferentes operaciones siguiendo las reglas de algoritmia
+        //Realizo diferentes operaciones siguiendo las reglas algebráicas
         float op1 = num2/num3 * num7/num2;
         float op2 = num6/num5 - op1 + num2/num30;
         float op3 = num1/num3/5;
