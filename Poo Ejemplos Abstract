@@ -1,0 +1,198 @@
+abstract class Persona {
+    //Esta clase será la clase base
+
+
+    private String apellido;
+    private String nombre;
+    private String dni;
+
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public abstract void imprimirNombreCompleto();
+}
+
+public class Alumno extends Persona {
+
+    private String apellido;
+    private String nombre;
+    private String dni;
+
+
+private double cuotaMensual;
+
+
+    public double getCuotaMensual() {
+        return cuotaMensual;
+    }
+
+    public void setCuotaMensual(double cuotaMensual) {
+        this.cuotaMensual = cuotaMensual;
+    }
+
+    @Override
+    public void imprimirNombreCompleto() {
+        System.out.println(getApellido()+" "+getNombre()+" "+getCuotaMensual());
+    }
+}
+
+public class Docente extends Persona {
+
+    private String apellido;
+    private String nombre;
+    private String dni;
+
+    private double sueldo;
+    private String tituloUniversitario;
+
+
+    public double getSueldo() {
+        return sueldo;
+    }
+
+    public void setSueldo(double sueldo) {
+        this.sueldo = sueldo;
+    }
+
+    public String getTituloUniversitario() {
+        return tituloUniversitario;
+    }
+
+    public void setTituloUniversitario(String tituloUniversitario) {
+        this.tituloUniversitario = tituloUniversitario;
+    }
+
+    @Override
+    public void imprimirNombreCompleto() {
+
+    }
+}
+
+public class main {
+
+    public static void main(String[] args) {
+
+      Alumno a1 = new Alumno();
+        a1.setNombre("Bruno");
+        a1.setApellido("Díaz");
+        a1.setDni("123");
+        a1.setCuotaMensual(100);
+        a1.imprimirNombreCompleto();
+
+      Docente d1 = new Docente();
+      d1.setNombre("Ricardo");
+      d1.setApellido("Tapia");
+      d1.setDni("30250225");
+      d1.setSueldo(100);
+
+        NoDocente n1 = new NoDocente();
+        n1.setNombre("Pedro");
+        n1.setApellido("Pascal");
+        n1.setDni("11223334");
+        n1.setSueldo(1000);
+
+
+        Persona p1; //Puedo tener variables, pero no puedo ponerle new
+
+
+
+
+    }
+
+}
+
+public class Materia {
+
+    private String nombre;
+    private int añoCursado;
+    private int cuatrimestre;
+
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getAñoCursado() {
+        return añoCursado;
+    }
+
+    public void setAñoCursado(int añoCursado) {
+        this.añoCursado = añoCursado;
+    }
+
+    public int getCuatrimestre() {
+        return cuatrimestre;
+    }
+
+    public void setCuatrimestre(int cuatrimestre) {
+        this.cuatrimestre = cuatrimestre;
+    }
+}
+
+public class NoDocente {
+
+    private String apellido;
+    private String nombre;
+    private String dni;
+
+    private double sueldo;
+
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public double getSueldo() {
+        return sueldo;
+    }
+
+    public void setSueldo(double sueldo) {
+        this.sueldo = sueldo;
+    }
+}
